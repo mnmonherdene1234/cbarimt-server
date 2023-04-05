@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  web:
+    image: mnmonherdene/cbarimt:latest
+    ports:
+      - 8080:8080
+    # restart: always
+    environment:
+      - API_KEY=
+    volumes:
+      - ./vatps:/root/.vatps
+      - ./poslib:/poslib
